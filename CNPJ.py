@@ -1,6 +1,7 @@
 import pandas as pd
 import http.client
 import json
+import time
 
 df = pd.read_excel('Planilha_CNPJ.xlsx')
 cnpjs = df['CNPJ']
@@ -8,7 +9,7 @@ headers = {'Accept': "application/json"}
 
 dados = {'NOME': [], 'FANTASIA': [], 'PORTE': [], 'LOGRADOURO': [], 'MUNICIPIO': [], 'BAIRRO': [], 'UF': [], 'CEP': [], 'EMAIL': [], 'TELEFONE': []}
 
-for cnpj in cnpjs:
+for i, cnpj in enumerate(cnpjs):
     conn = http.client.HTTPSConnection("www.receitaws.com.br")
     conn.request("GET", "/v1/cnpj/{}".format(cnpj), headers=headers)
     response = conn.getresponse()
@@ -27,6 +28,9 @@ for cnpj in cnpjs:
     dados['CEP'].append(data.get('cep', 'N/A'))
     dados['EMAIL'].append(data.get('email', 'N/A'))
     dados['TELEFONE'].append(data.get('telefone', 'N/A'))
+    
+    if (i + 1) % 3 == 0:
+        time.sleep(60)
 
 df_novo = pd.DataFrame(dados)
 df_final = pd.concat([df, df_novo], axis=1)
