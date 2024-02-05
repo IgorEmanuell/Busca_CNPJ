@@ -1,6 +1,6 @@
 # Atualização de Dados de CNPJ - Python e JavaScript
 
-Este repositório contém dois scripts, um em Python e outro em JavaScript, projetados para automatizar a atualização de informações cadastrais de empresas através da API pública do site Receitaws. Ambos os scripts leem um arquivo Excel contendo uma lista de CNPJs, consultam a API para obter detalhes como nome, fantasia, porte, endereço, e outros, e finalmente, atualizam uma nova planilha Excel com essas informações.
+Este repositório contém dois scripts, um em Python e outro em JavaScript, projetados para automatizar a atualização de informações cadastrais de empresas através da API pública do site [Receita WS](https://developers.receitaws.com.br/#/). Ambos os scripts leem um arquivo Excel contendo uma lista de CNPJs, consultam a API para obter detalhes como nome, fantasia, porte, endereço, e outros, e finalmente, atualizam uma nova planilha Excel com essas informações.
 
 ## Python Script
 ### Funcionamento
