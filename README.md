@@ -30,10 +30,10 @@ Este repositório contém dois scripts, um em Python e outro em JavaScript, proj
 
 ## Como Utilizar
 1. #### Pré-requisitos:
-     - Para o script Python, instale as dependências necessárias utilizando o comando: *pip install pandas.*
-     - Para o script JavaScript, instale as dependências utilizando o comando: *npm install axios xlsx.*
+     - Para o script Python, instale as dependências necessárias utilizando o comando: **pip install pandas.**
+     - Para o script JavaScript, instale as dependências utilizando o comando: **npm install axios xlsx.**
 2. ### Execução:
-      - Execute o script Python *'atualizacao_cnpj.py'* para o script Python.
+      - Execute o script Python **'atualizacao_cnpj.py'** para o script Python.
       - Execute o script JavaScript para o script JavaScript.
 3.  ### Resultado:
      - Uma nova planilha Excel será gerada ('Planilha_CNPJ_Atualizada.xlsx') com as informações atualizadas.
